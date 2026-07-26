@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: null
 division: null
 schedule_number: 2016-0011
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-treasury.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 7fa4547827c7c3cb6e159ee9ffcc602dae7679179bf7623b632c3c6b106fecf4
 effective_date: null
-effective_date_text: null
+effective_date_text: July 2021
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2016-0011
 status: current
@@ -52,7 +51,7 @@ tags:
 
 ## At a glance
 
-Special records retention schedule for Treasury, Oregon State, published by the Oregon Secretary of State, Archives Division, schedule number 2016-0011. It runs to 36 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 2 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Treasury, Oregon State, published by the Oregon Secretary of State, Archives Division, schedule number 2016-0011, effective date as printed: July 2021. It runs to 36 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 2 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -1195,6 +1194,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0025

@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon State Marine Board
 division: null
 schedule_number: 2024-0005
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-marine-board.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 4c86db4c0af5a20101c67e5e3bbb82dd1e55c8ff311489fc5a1daf60a48d5fdf
 effective_date: null
 effective_date_text: May 2024
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2024-0005
 status: current
@@ -366,6 +365,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0020

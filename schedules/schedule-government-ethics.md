@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon Government Ethics Commission
 division: null
 schedule_number: 2024-0001
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-government-ethics.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: d96b9e36e64971b1cbb4a64d868d92f753bd1dbdc6b41b608947f18268c8ca21
 effective_date: null
-effective_date_text: null
+effective_date_text: January 2024                                           Sched
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2024-0001
 status: current
@@ -55,7 +54,7 @@ tags:
 
 ## At a glance
 
-Special records retention schedule for Oregon Government Ethics Commission, published by the Oregon Secretary of State, Archives Division, schedule number 2024-0001. It runs to 2 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 5 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Oregon Government Ethics Commission, published by the Oregon Secretary of State, Archives Division, schedule number 2024-0001, effective date as printed: January 2024                                           Sched. It runs to 2 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 5 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -153,6 +152,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0025

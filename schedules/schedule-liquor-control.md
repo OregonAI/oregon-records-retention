@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon Liquor Control Commission (OLCC)
 division: null
 schedule_number: 2001-0010
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-liquor-control.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: f1893a0fa7c2fffcac990530c003cf41a55f86309e82e24421edc4997527fed5
 effective_date: null
 effective_date_text: null
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2001-0010
 status: current
@@ -2013,6 +2012,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0020

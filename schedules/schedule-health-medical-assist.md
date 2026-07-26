@@ -10,19 +10,18 @@ authority_level: schedule
 issuing_body: Oregon Secretary of State, Archives Division
 agency: null
 division: null
-schedule_number: null
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+schedule_number: 2006-0008
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-health-medical-assist.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: ef053db39cc1057c5cd1f103ec023d5f649a0d714bb4520105989e6f60033af9
 effective_date: null
 effective_date_text: April, 2007
+expires: null
+expires_text: null
 last_reviewed: null
-source_version: null
+source_version: 2006-0008
 status: current
 content_mode: verbatim
 conversion_notes: Text extracted from the source PDF with pypdf 6.14.2 (per-page extract_text), 38 pages. No repeated publisher-chrome header/footer or bare page-number lines were found. Only lines that BOTH repeat at a page edge on 80%+ of pages AND read as publisher chrome (Archives Division banner, edition/effective/expires/schedule-number line, bare page number) were removed; every other repeated line, including per-page 'Organizational Placement' / 'Agency' / 'Systems of Record' blocks, was left in place. Trailing whitespace removed and blank-line runs collapsed to one. No substantive text was rewritten, reordered, or normalized.
@@ -56,7 +55,7 @@ tags:
 
 ## At a glance
 
-Special records retention schedule for Health Authority (formerly DHS) - Medical Assistance Programs Division, published by the Oregon Secretary of State, Archives Division, effective date as printed: April, 2007. It runs to 38 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 6 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Health Authority (formerly DHS) - Medical Assistance Programs Division, published by the Oregon Secretary of State, Archives Division, schedule number 2006-0008, effective date as printed: April, 2007. It runs to 38 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 6 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -1406,6 +1405,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0020
