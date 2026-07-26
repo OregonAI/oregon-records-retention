@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Geology and Mineral Industries
 division: Administration
 schedule_number: 2010-0006
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-geology-minerals.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 34fa08714db12b444ba85c4d164e6956e6987e3d56e1e579674ae1eb3e5e2a20
 effective_date: null
-effective_date_text: null
+effective_date_text: Dec. 2012
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2010-0006
 status: current
@@ -54,7 +53,7 @@ tags:
 
 ## At a glance
 
-Special records retention schedule for Geology and Mineral Industries, published by the Oregon Secretary of State, Archives Division, schedule number 2010-0006. It runs to 8 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 4 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Geology and Mineral Industries, published by the Oregon Secretary of State, Archives Division, schedule number 2010-0006, effective date as printed: Dec. 2012. It runs to 8 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 4 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -366,6 +365,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0025

@@ -11,19 +11,18 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: null
 division: null
 schedule_number: 2016-0004
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-public-safety.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: de9edaf4d3b5c06b875c1331ca45c1c16b7e16615a6c4d147417ff275d937f81
 effective_date: null
 effective_date_text: February 2020
+expires: '2021-07-31'
+expires_text: July 2021
 last_reviewed: null
 source_version: 2016-0004
-status: current
+status: superseded
 content_mode: verbatim
 conversion_notes: 'Text extracted from the source PDF with pypdf 6.14.2 (per-page extract_text), 35 pages. Stripped repeated running-header lines: "Edition: February 2020"; "OREGON STATE ARCHIVES"; "Records Retention Schedule". Only lines that BOTH repeat at a page edge on 80%+ of pages AND read as publisher chrome (Archives Division banner, edition/effective/expires/schedule-number line, bare page number) were removed; every other repeated line, including per-page ''Organizational Placement'' / ''Agency'' / ''Systems of Record'' blocks, was left in place. Trailing whitespace removed and blank-line runs collapsed to one. No substantive text was rewritten, reordered, or normalized.'
 last_verified: ''
@@ -53,6 +52,11 @@ tags:
 > **NON-AUTHORITATIVE — AI-friendly reference only.** This is a curated
 > copy, not the official text. Verify against the official source:
 > <https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-public-safety.pdf> (retrieved 2026-07-25).
+
+> **⚠ EXPIRED — this schedule states it expired July 2021.**
+> The retention periods below are lapsed authority. Confirm the current
+> schedule with the Oregon State Archives before retaining or destroying
+> anything on the strength of this document.
 
 # Public Safety Standards and Training, Dept. of
 
@@ -1164,6 +1168,12 @@ chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
 
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
+
 - OAR 166-300-0015
 - OAR 166-300-0020
 - OAR 166-300-0025
@@ -1172,6 +1182,11 @@ they are referenced here as citations, never copied (see AGENTS.md).
 - OAR 166-300-0040
 - OAR 166-300-0045
 - OAR 166-350-0010
+
+## Curator notes
+
+This schedule's own cover states it expires July 2021, which has passed. Recorded as superseded because the schema has no 'expired' value — that is NOT evidence a replacement schedule exists; none was identified. Treat the retention periods below as lapsed authority and confirm the current schedule with the Archives Division before acting on them.
+
 
 ## Provenance & change history
 

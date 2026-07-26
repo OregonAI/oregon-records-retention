@@ -10,19 +10,18 @@ authority_level: schedule
 issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon Department of Transportation (ODOT)
 division: null
-schedule_number: null
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+schedule_number: 2002-0020
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-safety.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 52826c99360fa46d8e4f448b6fcaa2d4c34381dc5554bf1f451e97df60be0994
 effective_date: null
-effective_date_text: null
+effective_date_text: '7/17/03        Expires: 7/17/08'
+expires: null
+expires_text: null
 last_reviewed: null
-source_version: null
+source_version: 2002-0020
 status: current
 content_mode: verbatim
 conversion_notes: 'Text extracted from the source PDF with pypdf 6.14.2 (per-page extract_text), 18 pages. Stripped repeated running-header lines: "Edition: 7/17/03 Expires: 7/17/08"; "OREGON STATE ARCHIVES"; "Records Retention Schedule". Stripped 18 bare page-number line(s). Only lines that BOTH repeat at a page edge on 80%+ of pages AND read as publisher chrome (Archives Division banner, edition/effective/expires/schedule-number line, bare page number) were removed; every other repeated line, including per-page ''Organizational Placement'' / ''Agency'' / ''Systems of Record'' blocks, was left in place. Trailing whitespace removed and blank-line runs collapsed to one. No substantive text was rewritten, reordered, or normalized.'
@@ -53,7 +52,7 @@ tags:
 
 ## At a glance
 
-Special records retention schedule for Oregon Department of Transportation (ODOT), published by the Oregon Secretary of State, Archives Division. It runs to 18 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 3 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Oregon Department of Transportation (ODOT), published by the Oregon Secretary of State, Archives Division, schedule number 2002-0020, effective date as printed: 7/17/03        Expires: 7/17/08. It runs to 18 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 3 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -682,6 +681,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0020

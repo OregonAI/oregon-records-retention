@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Employment Relations Board
 division: null
 schedule_number: 2016-0007
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-employment-board.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: cb65d33134d03159bb50af70115833de6d5772b068f97a86334cfaa02a13a6d5
 effective_date: null
-effective_date_text: null
+effective_date_text: December 2016
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2016-0007
 status: current
@@ -57,7 +56,7 @@ tags:
 
 ## At a glance
 
-Special records retention schedule for Employment Relations Board, published by the Oregon Secretary of State, Archives Division, schedule number 2016-0007. It runs to 2 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 7 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Employment Relations Board, published by the Oregon Secretary of State, Archives Division, schedule number 2016-0007, effective date as printed: December 2016. It runs to 2 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 7 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -124,6 +123,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0020
