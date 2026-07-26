@@ -1,0 +1,946 @@
+note: "Every upstream source this corpus consumes. Human-approved via PR before ingestion.\nEnumerated\
+  \ from the index page under `index:` by src/enumerate_schedules.py.\n\nTwo traps recorded here so a\
+  \ future re-enumeration does not fall into them:\n1. The index page's raw HTML hash is UNSTABLE — it\
+  \ is SharePoint-rendered and carries\n   a fresh __VIEWSTATE and correlation id on every request. Change\
+  \ detection must\n   compare the extracted LINK SET, never the page bytes.\n2. Titles come from the\
+  \ paragraph label PRECEDING each anchor, not the anchor text:\n   66 of the 76 anchors read literally\
+  \ 'Schedule'. Ten ODOT divisions nested in a\n   blockquote are the exception and do carry descriptive\
+  \ anchor text.\n\n`id` is the lowercased slug; four upstream filenames are uppercase (schedule-OWEB.pdf,\n\
+  OYA, PSRB, TSPC) and the document id must match ^[a-z0-9][a-z0-9-]+$, so id and URL\ndiffer in case\
+  \ for those four. Lowercasing introduces no collisions (checked).\n"
+index: https://sos.oregon.gov/archives/records-management/Pages/state-admin-schedules.aspx
+recheck: quarterly
+sources:
+- id: schedule-agriculture
+  citation: Agriculture, Dept. of — Oregon Special Records Retention Schedule
+  title: Agriculture, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-agriculture.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-aviation
+  citation: Aviation, Dept. of — Oregon Special Records Retention Schedule
+  title: Aviation, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-aviation.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-blind
+  citation: Blind, Commission for the — Oregon Special Records Retention Schedule
+  title: Blind, Commission for the
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-blind.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-business-development
+  citation: Business Development Dept. — Oregon Special Records Retention Schedule
+  title: Business Development Dept.
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-business-development.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-chiropractic-examiners
+  citation: Chiropractic Examiners, Board of — Oregon Special Records Retention Schedule
+  title: Chiropractic Examiners, Board of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-chiropractic-examiners.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-college-workforce
+  citation: Community Colleges and Workforce Development, Dept of — Oregon Special Records Retention Schedule
+  title: Community Colleges and Workforce Development, Dept of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-college-workforce.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-consumer-business
+  citation: Consumer and Business Services, Dept. of — Oregon Special Records Retention Schedule
+  title: Consumer and Business Services, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-consumer-business.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-corrections
+  citation: Corrections, Department of — Oregon Special Records Retention Schedule
+  title: Corrections, Department of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-corrections.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-criminal-justice
+  citation: Criminal Justice Commission — Oregon Special Records Retention Schedule
+  title: Criminal Justice Commission
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-criminal-justice.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-das
+  citation: Administrative Services, Dept. of — Oregon Special Records Retention Schedule
+  title: Administrative Services, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-das.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-deq
+  citation: Environmental Quality, Dept. of — Oregon Special Records Retention Schedule
+  title: Environmental Quality, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-deq.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-driver-motor-vehicle
+  citation: ODOT -Driver and Motor Vehicle Services — Oregon Special Records Retention Schedule
+  title: ODOT -Driver and Motor Vehicle Services
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-driver-motor-vehicle.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-education
+  citation: Education, Oregon Dept. of — Oregon Special Records Retention Schedule
+  title: Education, Oregon Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-education.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-employment
+  citation: Employment Dept. — Oregon Special Records Retention Schedule
+  title: Employment Dept.
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-employment.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-employment-board
+  citation: Employment Relations Board — Oregon Special Records Retention Schedule
+  title: Employment Relations Board
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-employment-board.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-energy
+  citation: Energy, Dept. of — Oregon Special Records Retention Schedule
+  title: Energy, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-energy.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-film-video
+  citation: Film and Video Office, Oregon — Oregon Special Records Retention Schedule
+  title: Film and Video Office, Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-film-video.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-fish-wildlife
+  citation: Fish and Wildlife, Oregon Dept. of — Oregon Special Records Retention Schedule
+  title: Fish and Wildlife, Oregon Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-fish-wildlife.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-forestry
+  citation: Forestry, Oregon Dept. of — Oregon Special Records Retention Schedule
+  title: Forestry, Oregon Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-forestry.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-geology-minerals
+  citation: Geology and Mineral Industries, Oregon Dept. of — Oregon Special Records Retention Schedule
+  title: Geology and Mineral Industries, Oregon Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-geology-minerals.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-government-ethics
+  citation: Government Ethics Commission, Oregon — Oregon Special Records Retention Schedule
+  title: Government Ethics Commission, Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-government-ethics.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-governor-office
+  citation: Governor's Office — Oregon Special Records Retention Schedule
+  title: Governor's Office
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-governor-office.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-health-equity-inclusion
+  citation: Health Authority (formerly DHS) – Equity and Inclusion Division — Oregon Special Records Retention
+    Schedule
+  title: Health Authority (formerly DHS) – Equity and Inclusion Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-health-equity-inclusion.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-health-medical-assist
+  citation: Health Authority (formerly DHS) - Medical Assistance Programs Division — Oregon Special Records
+    Retention Schedule
+  title: Health Authority (formerly DHS) - Medical Assistance Programs Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-health-medical-assist.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-health-policy-analytics
+  citation: Health Authority (formerly DHS) - Health Policy and Analytics — Oregon Special Records Retention
+    Schedule
+  title: Health Authority (formerly DHS) - Health Policy and Analytics
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-health-policy-analytics.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-health-public
+  citation: Health Authority (formerly DHS) - Public Health Division — Oregon Special Records Retention
+    Schedule
+  title: Health Authority (formerly DHS) - Public Health Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-health-public.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-highway-division
+  citation: ODOT - Highway Division — Oregon Special Records Retention Schedule
+  title: ODOT - Highway Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-highway-division.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-hospital
+  citation: Health Authority (formerly DHS) - Oregon State Hospital — Oregon Special Records Retention
+    Schedule
+  title: Health Authority (formerly DHS) - Oregon State Hospital
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-hospital.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-housing
+  citation: Housing and Community Services Dept., Oregon — Oregon Special Records Retention Schedule
+  title: Housing and Community Services Dept., Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-housing.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-human-services-aging-disabilities
+  citation: Human Services – Aging and People with Disabilities — Oregon Special Records Retention Schedule
+  title: Human Services – Aging and People with Disabilities
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-human-services-aging-disabilities.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-human-services-child-welfare
+  citation: Human Services – Child Welfare Division — Oregon Special Records Retention Schedule
+  title: Human Services – Child Welfare Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-human-services-child-welfare.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-human-services-health-bcu
+  citation: Human Services/Health Authority - Shared Services, Background Check Unit — Oregon Special
+    Records Retention Schedule
+  title: Human Services/Health Authority - Shared Services, Background Check Unit
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-human-services-health-bcu.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-human-services-training-investigation-safety
+  citation: Human Services - Office of Training, Investigation and Safety — Oregon Special Records Retention
+    Schedule
+  title: Human Services - Office of Training, Investigation and Safety
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-human-services-training-investigation-safety.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-justice
+  citation: Justice, Oregon Dept. of — Oregon Special Records Retention Schedule
+  title: Justice, Oregon Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-justice.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-labor-industries
+  citation: Labor and Industries, Bureau of — Oregon Special Records Retention Schedule
+  title: Labor and Industries, Bureau of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-labor-industries.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-land-conservation
+  citation: Land Conservation and Development, Dept. of — Oregon Special Records Retention Schedule
+  title: Land Conservation and Development, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-land-conservation.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-landscape
+  citation: Landscape Contractors Board — Oregon Special Records Retention Schedule
+  title: Landscape Contractors Board
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-landscape.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-library
+  citation: Library, Oregon State — Oregon Special Records Retention Schedule
+  title: Library, Oregon State
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-library.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-liquor-control
+  citation: Liquor Control Commission, Oregon — Oregon Special Records Retention Schedule
+  title: Liquor Control Commission, Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-liquor-control.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-long-term-care
+  citation: Long Term Care Ombudsman, Office of — Oregon Special Records Retention Schedule
+  title: Long Term Care Ombudsman, Office of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-long-term-care.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-lottery
+  citation: Lottery, Oregon State — Oregon Special Records Retention Schedule
+  title: Lottery, Oregon State
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-lottery.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-marine-board
+  citation: Marine Board, Oregon State — Oregon Special Records Retention Schedule
+  title: Marine Board, Oregon State
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-marine-board.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-medical-board
+  citation: Medical Board, Oregon — Oregon Special Records Retention Schedule
+  title: Medical Board, Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-medical-board.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-military
+  citation: Military Department, Oregon — Oregon Special Records Retention Schedule
+  title: Military Department, Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-military.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-nursing-board
+  citation: Nursing , Oregon State Board of — Oregon Special Records Retention Schedule
+  title: Nursing , Oregon State Board of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-nursing-board.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-oem
+  citation: Emergency Management, Dept. of — Oregon Special Records Retention Schedule
+  title: Emergency Management, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-oem.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-optometry-board
+  citation: Optometry, Oregon Board of — Oregon Special Records Retention Schedule
+  title: Optometry, Oregon Board of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-optometry-board.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-oweb
+  citation: Watershed Enhancement Board — Oregon Special Records Retention Schedule
+  title: Watershed Enhancement Board
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-OWEB.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  filename_case_note: upstream filename is schedule-OWEB.pdf (uppercase)
+- id: schedule-oya
+  citation: Youth Authority, Oregon — Oregon Special Records Retention Schedule
+  title: Youth Authority, Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-OYA.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  filename_case_note: upstream filename is schedule-OYA.pdf (uppercase)
+- id: schedule-parks-recreation
+  citation: Parks and Recreation Department — Oregon Special Records Retention Schedule
+  title: Parks and Recreation Department
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-parks-recreation.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-parole-post-prison-supervision
+  citation: Parole and Post-Prison Supervision, State Board of — Oregon Special Records Retention Schedule
+  title: Parole and Post-Prison Supervision, State Board of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-parole-post-prison-supervision.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-pers
+  citation: Public Employees Retirement System — Oregon Special Records Retention Schedule
+  title: Public Employees Retirement System
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-pers.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-pharmacy-board
+  citation: Pharmacy, Oregon Board of — Oregon Special Records Retention Schedule
+  title: Pharmacy, Oregon Board of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-pharmacy-board.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-police
+  citation: Police, Oregon State — Oregon Special Records Retention Schedule
+  title: Police, Oregon State
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-police.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-psrb
+  citation: Psychiatric Security Review Board — Oregon Special Records Retention Schedule
+  title: Psychiatric Security Review Board
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-PSRB.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  filename_case_note: upstream filename is schedule-PSRB.pdf (uppercase)
+- id: schedule-public-records-advocate
+  citation: Public Records Advocate, Office of the Oregon — Oregon Special Records Retention Schedule
+  title: Public Records Advocate, Office of the Oregon
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-public-records-advocate.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-public-safety
+  citation: Public Safety Standards and Training, Dept. of — Oregon Special Records Retention Schedule
+  title: Public Safety Standards and Training, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-public-safety.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-public-transit
+  citation: ODOT - Public Transit Division — Oregon Special Records Retention Schedule
+  title: ODOT - Public Transit Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-public-transit.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-puc
+  citation: Public Utility Commission — Oregon Special Records Retention Schedule
+  title: Public Utility Commission
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-puc.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-racing-commission
+  citation: Racing Commission — Oregon Special Records Retention Schedule
+  title: Racing Commission
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-racing-commission.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-real-estate
+  citation: Real Estate Agency — Oregon Special Records Retention Schedule
+  title: Real Estate Agency
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-real-estate.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-revenue
+  citation: Revenue Department — Oregon Special Records Retention Schedule
+  title: Revenue Department
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-revenue.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-saif
+  citation: SAIF Corporation (State Accident Insurance Fund) — Oregon Special Records Retention Schedule
+  title: SAIF Corporation (State Accident Insurance Fund)
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-saif.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-secretary-state
+  citation: Secretary of State, Office of — Oregon Special Records Retention Schedule
+  title: Secretary of State, Office of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-secretary-state.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-state-lands
+  citation: State Lands, Dept. of — Oregon Special Records Retention Schedule
+  title: State Lands, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-state-lands.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-transportation-central-services
+  citation: ODOT - Central Services Division — Oregon Special Records Retention Schedule
+  title: ODOT - Central Services Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-central-services.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-transportation-communications
+  citation: ODOT - Communications Division — Oregon Special Records Retention Schedule
+  title: ODOT - Communications Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-communications.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-transportation-development
+  citation: ODOT - Transportation Development Division — Oregon Special Records Retention Schedule
+  title: ODOT - Transportation Development Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-development.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-transportation-director
+  citation: ODOT - Director's Office — Oregon Special Records Retention Schedule
+  title: ODOT - Director's Office
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-director.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-transportation-motor-carrier
+  citation: ODOT - Motor Carrier Transportation Division — Oregon Special Records Retention Schedule
+  title: ODOT - Motor Carrier Transportation Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-motor-carrier.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-transportation-rail
+  citation: ODOT - Rail Division — Oregon Special Records Retention Schedule
+  title: ODOT - Rail Division
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-rail.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-transportation-safety
+  citation: ODOT - Transportation Safety — Oregon Special Records Retention Schedule
+  title: ODOT - Transportation Safety
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-safety.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  group: Transportation Department (ODOT)
+- id: schedule-treasury
+  citation: Treasury, Oregon State — Oregon Special Records Retention Schedule
+  title: Treasury, Oregon State
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-treasury.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-tspc
+  citation: Teacher Standards and Practices Commission — Oregon Special Records Retention Schedule
+  title: Teacher Standards and Practices Commission
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-TSPC.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+  filename_case_note: upstream filename is schedule-TSPC.pdf (uppercase)
+- id: schedule-veterans-affairs
+  citation: Veterans' Affairs, Dept. of — Oregon Special Records Retention Schedule
+  title: Veterans' Affairs, Dept. of
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-veterans-affairs.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192
+- id: schedule-water-resources
+  citation: Water Resources Department — Oregon Special Records Retention Schedule
+  title: Water Resources Department
+  url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-water-resources.pdf
+  doc_type: schedule
+  recheck: quarterly
+  sha256: ''
+  why_relevant: Agency-specific record series and retention periods that the OAR chapter 166 general schedules
+    do not cover.
+  references_out:
+  - OAR 166 general schedules
+  - ORS 192

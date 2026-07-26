@@ -1,0 +1,2666 @@
+{
+ "note": "Nodes are this corpus's schedules. Edges are the general-schedule rules each schedule cites; their `to` is an OAR CITATION STRING that resolves in OregonAI/executive-regulatory-frameworks, not a node here — see AGENTS.md 'Scope boundary'.",
+ "n_nodes": 76,
+ "n_edges": 440,
+ "n_edges_external": 440,
+ "nodes": [
+  {
+   "id": "schedule-agriculture",
+   "title": "Agriculture, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-agriculture.md"
+  },
+  {
+   "id": "schedule-aviation",
+   "title": "Aviation, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-aviation.md"
+  },
+  {
+   "id": "schedule-blind",
+   "title": "Blind, Commission for the",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-blind.md"
+  },
+  {
+   "id": "schedule-business-development",
+   "title": "Business Development Dept.",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-business-development.md"
+  },
+  {
+   "id": "schedule-chiropractic-examiners",
+   "title": "Chiropractic Examiners, Board of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-chiropractic-examiners.md"
+  },
+  {
+   "id": "schedule-college-workforce",
+   "title": "Community Colleges and Workforce Development, Dept of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-college-workforce.md"
+  },
+  {
+   "id": "schedule-consumer-business",
+   "title": "Consumer and Business Services, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-consumer-business.md"
+  },
+  {
+   "id": "schedule-corrections",
+   "title": "Corrections, Department of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-corrections.md"
+  },
+  {
+   "id": "schedule-criminal-justice",
+   "title": "Criminal Justice Commission",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-criminal-justice.md"
+  },
+  {
+   "id": "schedule-das",
+   "title": "Administrative Services, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-das.md"
+  },
+  {
+   "id": "schedule-deq",
+   "title": "Environmental Quality, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-deq.md"
+  },
+  {
+   "id": "schedule-driver-motor-vehicle",
+   "title": "ODOT -Driver and Motor Vehicle Services",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-driver-motor-vehicle.md"
+  },
+  {
+   "id": "schedule-education",
+   "title": "Education, Oregon Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-education.md"
+  },
+  {
+   "id": "schedule-employment-board",
+   "title": "Employment Relations Board",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-employment-board.md"
+  },
+  {
+   "id": "schedule-employment",
+   "title": "Employment Dept.",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-employment.md"
+  },
+  {
+   "id": "schedule-energy",
+   "title": "Energy, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-energy.md"
+  },
+  {
+   "id": "schedule-film-video",
+   "title": "Film and Video Office, Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-film-video.md"
+  },
+  {
+   "id": "schedule-fish-wildlife",
+   "title": "Fish and Wildlife, Oregon Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-fish-wildlife.md"
+  },
+  {
+   "id": "schedule-forestry",
+   "title": "Forestry, Oregon Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-forestry.md"
+  },
+  {
+   "id": "schedule-geology-minerals",
+   "title": "Geology and Mineral Industries, Oregon Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-geology-minerals.md"
+  },
+  {
+   "id": "schedule-government-ethics",
+   "title": "Government Ethics Commission, Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-government-ethics.md"
+  },
+  {
+   "id": "schedule-governor-office",
+   "title": "Governor's Office",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-governor-office.md"
+  },
+  {
+   "id": "schedule-health-equity-inclusion",
+   "title": "Health Authority (formerly DHS) – Equity and Inclusion Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-health-equity-inclusion.md"
+  },
+  {
+   "id": "schedule-health-medical-assist",
+   "title": "Health Authority (formerly DHS) - Medical Assistance Programs Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-health-medical-assist.md"
+  },
+  {
+   "id": "schedule-health-policy-analytics",
+   "title": "Health Authority (formerly DHS) - Health Policy and Analytics",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-health-policy-analytics.md"
+  },
+  {
+   "id": "schedule-health-public",
+   "title": "Health Authority (formerly DHS) - Public Health Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-health-public.md"
+  },
+  {
+   "id": "schedule-highway-division",
+   "title": "ODOT - Highway Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-highway-division.md"
+  },
+  {
+   "id": "schedule-hospital",
+   "title": "Health Authority (formerly DHS) - Oregon State Hospital",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-hospital.md"
+  },
+  {
+   "id": "schedule-housing",
+   "title": "Housing and Community Services Dept., Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-housing.md"
+  },
+  {
+   "id": "schedule-human-services-aging-disabilities",
+   "title": "Human Services – Aging and People with Disabilities",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-human-services-aging-disabilities.md"
+  },
+  {
+   "id": "schedule-human-services-child-welfare",
+   "title": "Human Services – Child Welfare Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-human-services-child-welfare.md"
+  },
+  {
+   "id": "schedule-human-services-health-bcu",
+   "title": "Human Services/Health Authority - Shared Services, Background Check Unit",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-human-services-health-bcu.md"
+  },
+  {
+   "id": "schedule-human-services-training-investigation-safety",
+   "title": "Human Services - Office of Training, Investigation and Safety",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-human-services-training-investigation-safety.md"
+  },
+  {
+   "id": "schedule-justice",
+   "title": "Justice, Oregon Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-justice.md"
+  },
+  {
+   "id": "schedule-labor-industries",
+   "title": "Labor and Industries, Bureau of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-labor-industries.md"
+  },
+  {
+   "id": "schedule-land-conservation",
+   "title": "Land Conservation and Development, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-land-conservation.md"
+  },
+  {
+   "id": "schedule-landscape",
+   "title": "Landscape Contractors Board",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-landscape.md"
+  },
+  {
+   "id": "schedule-library",
+   "title": "Library, Oregon State",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-library.md"
+  },
+  {
+   "id": "schedule-liquor-control",
+   "title": "Liquor Control Commission, Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-liquor-control.md"
+  },
+  {
+   "id": "schedule-long-term-care",
+   "title": "Long Term Care Ombudsman, Office of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-long-term-care.md"
+  },
+  {
+   "id": "schedule-lottery",
+   "title": "Lottery, Oregon State",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-lottery.md"
+  },
+  {
+   "id": "schedule-marine-board",
+   "title": "Marine Board, Oregon State",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-marine-board.md"
+  },
+  {
+   "id": "schedule-medical-board",
+   "title": "Medical Board, Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-medical-board.md"
+  },
+  {
+   "id": "schedule-military",
+   "title": "Military Department, Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-military.md"
+  },
+  {
+   "id": "schedule-nursing-board",
+   "title": "Nursing , Oregon State Board of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-nursing-board.md"
+  },
+  {
+   "id": "schedule-oem",
+   "title": "Emergency Management, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-oem.md"
+  },
+  {
+   "id": "schedule-optometry-board",
+   "title": "Optometry, Oregon Board of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-optometry-board.md"
+  },
+  {
+   "id": "schedule-oweb",
+   "title": "Watershed Enhancement Board",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-oweb.md"
+  },
+  {
+   "id": "schedule-oya",
+   "title": "Youth Authority, Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-oya.md"
+  },
+  {
+   "id": "schedule-parks-recreation",
+   "title": "Parks and Recreation Department",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-parks-recreation.md"
+  },
+  {
+   "id": "schedule-parole-post-prison-supervision",
+   "title": "Parole and Post-Prison Supervision, State Board of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-parole-post-prison-supervision.md"
+  },
+  {
+   "id": "schedule-pers",
+   "title": "Public Employees Retirement System",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-pers.md"
+  },
+  {
+   "id": "schedule-pharmacy-board",
+   "title": "Pharmacy, Oregon Board of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-pharmacy-board.md"
+  },
+  {
+   "id": "schedule-police",
+   "title": "Police, Oregon State",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-police.md"
+  },
+  {
+   "id": "schedule-psrb",
+   "title": "Psychiatric Security Review Board",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-psrb.md"
+  },
+  {
+   "id": "schedule-public-records-advocate",
+   "title": "Public Records Advocate, Office of the Oregon",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-public-records-advocate.md"
+  },
+  {
+   "id": "schedule-public-safety",
+   "title": "Public Safety Standards and Training, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-public-safety.md"
+  },
+  {
+   "id": "schedule-public-transit",
+   "title": "ODOT - Public Transit Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-public-transit.md"
+  },
+  {
+   "id": "schedule-puc",
+   "title": "Public Utility Commission",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-puc.md"
+  },
+  {
+   "id": "schedule-racing-commission",
+   "title": "Racing Commission",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-racing-commission.md"
+  },
+  {
+   "id": "schedule-real-estate",
+   "title": "Real Estate Agency",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-real-estate.md"
+  },
+  {
+   "id": "schedule-revenue",
+   "title": "Revenue Department",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-revenue.md"
+  },
+  {
+   "id": "schedule-saif",
+   "title": "SAIF Corporation (State Accident Insurance Fund)",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-saif.md"
+  },
+  {
+   "id": "schedule-secretary-state",
+   "title": "Secretary of State, Office of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-secretary-state.md"
+  },
+  {
+   "id": "schedule-state-lands",
+   "title": "State Lands, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-state-lands.md"
+  },
+  {
+   "id": "schedule-transportation-central-services",
+   "title": "ODOT - Central Services Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-central-services.md"
+  },
+  {
+   "id": "schedule-transportation-communications",
+   "title": "ODOT - Communications Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-communications.md"
+  },
+  {
+   "id": "schedule-transportation-development",
+   "title": "ODOT - Transportation Development Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-development.md"
+  },
+  {
+   "id": "schedule-transportation-director",
+   "title": "ODOT - Director's Office",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-director.md"
+  },
+  {
+   "id": "schedule-transportation-motor-carrier",
+   "title": "ODOT - Motor Carrier Transportation Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-motor-carrier.md"
+  },
+  {
+   "id": "schedule-transportation-rail",
+   "title": "ODOT - Rail Division",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-rail.md"
+  },
+  {
+   "id": "schedule-transportation-safety",
+   "title": "ODOT - Transportation Safety",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-transportation-safety.md"
+  },
+  {
+   "id": "schedule-treasury",
+   "title": "Treasury, Oregon State",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-treasury.md"
+  },
+  {
+   "id": "schedule-tspc",
+   "title": "Teacher Standards and Practices Commission",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-tspc.md"
+  },
+  {
+   "id": "schedule-veterans-affairs",
+   "title": "Veterans' Affairs, Dept. of",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-veterans-affairs.md"
+  },
+  {
+   "id": "schedule-water-resources",
+   "title": "Water Resources Department",
+   "doc_type": "schedule",
+   "path": "schedules/schedule-water-resources.md"
+  }
+ ],
+ "edges": [
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-agriculture",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-aviation",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-blind",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-business-development",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-chiropractic-examiners",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-chiropractic-examiners",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-chiropractic-examiners",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-college-workforce",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-consumer-business",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-corrections",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-corrections",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-corrections",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-corrections",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-corrections",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-criminal-justice",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-das",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-deq",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-driver-motor-vehicle",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-education",
+   "type": "related",
+   "to": "OAR 166-400-0060"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-employment-board",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-employment",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-energy",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-energy",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-energy",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-energy",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-energy",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0003"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-fish-wildlife",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-forestry",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-geology-minerals",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-geology-minerals",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-geology-minerals",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-geology-minerals",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-government-ethics",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-government-ethics",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-government-ethics",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-government-ethics",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-government-ethics",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-governor-office",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-health-equity-inclusion",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-health-equity-inclusion",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-health-equity-inclusion",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-health-medical-assist",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-health-medical-assist",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-health-medical-assist",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-health-medical-assist",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-health-medical-assist",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-health-medical-assist",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-health-policy-analytics",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-health-public",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-highway-division",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-hospital",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-housing",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-030-0026"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-030-0041"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-300-0010"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-human-services-aging-disabilities",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-human-services-child-welfare",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-human-services-child-welfare",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-human-services-child-welfare",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-human-services-child-welfare",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-human-services-child-welfare",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-human-services-health-bcu",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-human-services-health-bcu",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-human-services-health-bcu",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-human-services-training-investigation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-human-services-training-investigation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-human-services-training-investigation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-human-services-training-investigation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-human-services-training-investigation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-justice",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-labor-industries",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0010"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-land-conservation",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-landscape",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-library",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-library",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-library",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-library",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-library",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-library",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-liquor-control",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-long-term-care",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-long-term-care",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-long-term-care",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-long-term-care",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-lottery",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-marine-board",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-marine-board",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-marine-board",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-marine-board",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-marine-board",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-medical-board",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-400-0015"
+  },
+  {
+   "from": "schedule-military",
+   "type": "related",
+   "to": "OAR 166-400-0060"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-nursing-board",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-oem",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-optometry-board",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-oweb",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-oweb",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-oweb",
+   "type": "related",
+   "to": "OAR 166-350-0005"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-oya",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-parks-recreation",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-parole-post-prison-supervision",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-parole-post-prison-supervision",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-pers",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-pharmacy-board",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-pharmacy-board",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0010"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-police",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-psrb",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-psrb",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-psrb",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-public-safety",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-public-transit",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-public-transit",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-public-transit",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-public-transit",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-puc",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-racing-commission",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-racing-commission",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-racing-commission",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-racing-commission",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-racing-commission",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-racing-commission",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-real-estate",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-revenue",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-revenue",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-revenue",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-revenue",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-revenue",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-revenue",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0017"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-secretary-state",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-state-lands",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-transportation-central-services",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-transportation-communications",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-communications",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-transportation-communications",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-transportation-communications",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-transportation-communications",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-transportation-development",
+   "type": "related",
+   "to": "OAR 166-300-0010"
+  },
+  {
+   "from": "schedule-transportation-development",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-development",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-transportation-development",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-transportation-development",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-transportation-development",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-transportation-director",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-director",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-transportation-director",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-transportation-director",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-transportation-director",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-transportation-director",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-transportation-motor-carrier",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-motor-carrier",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-transportation-motor-carrier",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-transportation-rail",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-rail",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-transportation-rail",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-transportation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-transportation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-transportation-safety",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-treasury",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-treasury",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-tspc",
+   "type": "related",
+   "to": "OAR 166-350-0010"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0035"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  },
+  {
+   "from": "schedule-veterans-affairs",
+   "type": "related",
+   "to": "OAR 166-300-0045"
+  },
+  {
+   "from": "schedule-water-resources",
+   "type": "related",
+   "to": "OAR 166-300-0015"
+  },
+  {
+   "from": "schedule-water-resources",
+   "type": "related",
+   "to": "OAR 166-300-0020"
+  },
+  {
+   "from": "schedule-water-resources",
+   "type": "related",
+   "to": "OAR 166-300-0025"
+  },
+  {
+   "from": "schedule-water-resources",
+   "type": "related",
+   "to": "OAR 166-300-0030"
+  },
+  {
+   "from": "schedule-water-resources",
+   "type": "related",
+   "to": "OAR 166-300-0040"
+  }
+ ]
+}

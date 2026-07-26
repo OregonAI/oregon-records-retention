@@ -1,0 +1,8 @@
+.obsidian/
+__pycache__/
+.venv/
+
+# Ingestion fetch cache: one copy of each upstream PDF, kept so re-running
+# src/ingest_schedules.py is offline and the Archives Division is fetched once
+# per URL. The committed provenance copy is _meta/snapshots/<id>.pdf.
+_meta/.cache/
