@@ -5,66 +5,68 @@ Two families of scheme live here, and they behave very differently on purpose.
 
 LOCAL — schedules held in this corpus. These resolve to real document ids.
 
-CROSS-CORPUS — OAR chapter 166 and ORS 192. These deliberately resolve to NOTHING
-here, because the documents genuinely are not in this corpus: the general retention
-schedules live verbatim in OregonAI/executive-regulatory-frameworks and are referenced
-rather than copied (see AGENTS.md, "Scope boundary").
+CROSS-CORPUS — OAR chapter 166 and ORS 192. The documents genuinely are not in this
+corpus: the general retention schedules live verbatim in
+OregonAI/executive-regulatory-frameworks and are referenced rather than copied (see
+AGENTS.md, "Scope boundary"). They are marked `corpus=` so the toolkit resolves them
+against that corpus's published index and returns a real title and link.
 
-The toolkit has no remote resolution yet. The lazy option would be to leave those
-citations unregistered and let an agent receive a bare "could not resolve". That is
-true but useless, and worse, it reads as "this citation is bad" when the citation is
-perfectly good and simply lives next door. So they ARE registered, with resolvers that
-return no candidates plus a `note` explaining exactly where the document is and how to
-reach it. `register_scheme` supports this directly: a resolver may return
-`(candidates, note)`, and the note is surfaced whether or not resolution succeeded.
+Requires corpus-toolkit >= 1.1.0 and the `siblings:` block in corpus.yml. Before
+v1.1.0 these schemes returned a textual pointer instead, because the alternative —
+leaving them unregistered — gave an agent a bare "could not resolve", which is true
+but useless and reads as "this citation is bad" when the citation is good and simply
+lives next door.
 
-When toolkit remote resolution lands, these resolvers are the seam to change: keep the
-patterns, swap the bodies for a real lookup.
+The failure mode is the part worth understanding. If the sibling's index cannot be
+loaded, the toolkit reports the citation unresolved AND says the sibling was
+unavailable, stating explicitly that this is not evidence the document is absent.
+"We could not look" and "it is not there" are different answers. For a corpus about
+what agencies may destroy and when, letting the first silently become the second is
+the worst thing this code could do.
 """
 import re
 
 from corpus_toolkit.mcp.framework import register_scheme
 
-# The sibling corpus that holds the general schedules and the statutory spine.
-POLICY_CORPUS = "OregonAI/executive-regulatory-frameworks"
-POLICY_URL = "https://github.com/OregonAI/executive-regulatory-frameworks"
-
-
-def _elsewhere(kind: str, cite: str, path_hint: str):
-    """A resolution that correctly finds nothing locally, and says why."""
-    return [], (
-        f"{cite} is {kind}. It is NOT in this corpus by design — this corpus holds only "
-        f"agency SPECIAL schedules; the general schedules and statutes live in "
-        f"{POLICY_CORPUS} at `{path_hint}`. Look it up there: {POLICY_URL}. "
-        "(Cross-corpus citation resolution is not implemented in the toolkit yet, so "
-        "this pointer is textual rather than a resolved document.)")
+# The sibling corpus that holds the general schedules and the statutory spine. The id
+# must match an entry in corpus.yml's `siblings:` block — that is where its published
+# index and web base live.
+POLICY_CORPUS_ID = "executive-regulatory-frameworks"
 
 
 # --- cross-corpus: OAR chapter 166, the GENERAL retention schedules -----------------
+# `corpus=` (toolkit >= 1.1.0) tells resolve_citation these candidate ids live in the
+# sibling declared under `siblings:` in corpus.yml. It resolves them against that
+# corpus's published index and returns a real title and URL, rather than the textual
+# pointer this file emitted before v1.1.0.
+#
+# What the toolkit does when the sibling cannot be reached matters more than the happy
+# path: it reports the citation as unresolved AND says the sibling was unavailable,
+# explicitly noting that this is not evidence the document is absent. "We could not
+# look" and "it is not there" are different answers, and a records corpus must never
+# let the first quietly become the second.
+#
 # Matched narrowly to chapter 166. An OAR citation from any other chapter is a
-# different kind of reference and should not be claimed by this scheme.
-def _resolve_oar_166(m):
-    rule = m.group("num")
-    div = rule.split("-")[1]
-    return _elsewhere("a general records-retention rule (OAR chapter 166)",
-                      f"OAR {rule}", f"rules/166/{div}/oar-{rule}.md")
+# different kind of reference and is not claimed by this scheme.
+def _oar_166_id(m):
+    return [f"oar-{m.group('num')}"]
 
 
 register_scheme("oar-166-general-schedule",
                 r"(?:OAR\s*)?(?P<num>166-\d{3}-\d{4})\s*$",
-                resolver=_resolve_oar_166)
+                resolver=_oar_166_id,
+                corpus=POLICY_CORPUS_ID)
 
 
 # --- cross-corpus: ORS 192, the public-records statutes -----------------------------
-def _resolve_ors_192(m):
-    sec = m.group("num")
-    return _elsewhere("a public-records statute (ORS chapter 192)",
-                      f"ORS {sec}", f"statutes/ors-{sec.lower()}.md")
+def _ors_192_id(m):
+    return [f"ors-{m.group('num').lower()}"]
 
 
 register_scheme("ors-192-public-records",
                 r"(?:ORS\s*)?(?P<num>192\.\d{3})\s*$",
-                resolver=_resolve_ors_192)
+                resolver=_ors_192_id,
+                corpus=POLICY_CORPUS_ID)
 
 
 # --- local: a whole agency special schedule -----------------------------------------

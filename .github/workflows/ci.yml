@@ -6,11 +6,11 @@ on:
 
 jobs:
   frontmatter:
-    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.0.5
+    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.1.0
   provenance:
-    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.0.5
+    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.1.0
   links:
-    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.0.5
+    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.1.0
     with:
       # The template calls this with no exclusions. lychee walks './**/*.md',
       # which includes _meta/templates/document.md — a skeleton whose example
