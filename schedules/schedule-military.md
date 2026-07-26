@@ -11,19 +11,18 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: null
 division: null
 schedule_number: 2015-0017
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-military.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 2e63c57b91283017df8bbc246993d820d72600f6bb308632a29ab291daef27a4
 effective_date: null
-effective_date_text: null
+effective_date_text: 'September 2015     Expires: September 2020'
+expires: '2020-09-30'
+expires_text: September 2020
 last_reviewed: null
 source_version: 2015-0017
-status: current
+status: superseded
 content_mode: verbatim
 conversion_notes: 'Text extracted from the source PDF with pypdf 6.14.2 (per-page extract_text), 31 pages. Stripped repeated running-header lines: "Edition: September 2015 Expires: September 2020"; "OREGON STATE ARCHIVES"; "Records Retention Schedule". Stripped 30 bare page-number line(s). Only lines that BOTH repeat at a page edge on 80%+ of pages AND read as publisher chrome (Archives Division banner, edition/effective/expires/schedule-number line, bare page number) were removed; every other repeated line, including per-page ''Organizational Placement'' / ''Agency'' / ''Systems of Record'' blocks, was left in place. Trailing whitespace removed and blank-line runs collapsed to one. No substantive text was rewritten, reordered, or normalized.'
 last_verified: ''
@@ -54,11 +53,16 @@ tags:
 > copy, not the official text. Verify against the official source:
 > <https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-military.pdf> (retrieved 2026-07-25).
 
+> **⚠ EXPIRED — this schedule states it expired September 2020.**
+> The retention periods below are lapsed authority. Confirm the current
+> schedule with the Oregon State Archives before retaining or destroying
+> anything on the strength of this document.
+
 # Military Department, Oregon
 
 ## At a glance
 
-Special records retention schedule for Military Department, Oregon, published by the Oregon Secretary of State, Archives Division, schedule number 2015-0017. It runs to 31 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 8 distinct general-schedule rule(s) are cited in the text below.
+Special records retention schedule for Military Department, Oregon, published by the Oregon Secretary of State, Archives Division, schedule number 2015-0017, effective date as printed: September 2015     Expires: September 2020. It runs to 31 pages and lists the agency's own record series with a retention and disposition clause for each. Record series that every state agency holds are NOT here: they are covered by the OAR chapter 166 general schedules, which this corpus references rather than copies — 8 distinct general-schedule rule(s) are cited in the text below.
 
 ## Full text
 
@@ -958,6 +962,12 @@ chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
 
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
+
 - OAR 166-300-0015
 - OAR 166-300-0020
 - OAR 166-300-0025
@@ -966,6 +976,11 @@ they are referenced here as citations, never copied (see AGENTS.md).
 - OAR 166-300-0040
 - OAR 166-400-0015
 - OAR 166-400-0060
+
+## Curator notes
+
+This schedule's own cover states it expires September 2020, which has passed. Recorded as superseded because the schema has no 'expired' value — that is NOT evidence a replacement schedule exists; none was identified. Treat the retention periods below as lapsed authority and confirm the current schedule with the Archives Division before acting on them.
+
 
 ## Provenance & change history
 

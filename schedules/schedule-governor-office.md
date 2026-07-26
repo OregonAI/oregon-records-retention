@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon Governor’s Office
 division: null
 schedule_number: 2019-0005
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-governor-office.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 52d3500459cc05399286b5342cc26a6a99e8c66593063b917916e814bddbf360
 effective_date: null
 effective_date_text: April 2020
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2019-0005
 status: current
@@ -343,6 +342,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0020

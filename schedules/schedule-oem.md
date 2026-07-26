@@ -11,16 +11,15 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon Department of Emergency Management (OEM)
 division: null
 schedule_number: 2026-0001
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-oem.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 1483001747489659d533f0e0c0b23b81821b0b11d7013339e1a93a1bd33a2b7a
 effective_date: null
 effective_date_text: February 2026
+expires: null
+expires_text: null
 last_reviewed: null
 source_version: 2026-0001
 status: current
@@ -624,6 +623,12 @@ General records retention schedules cited in the text above. These are OAR
 chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
+
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
 
 - OAR 166-300-0015
 - OAR 166-300-0017

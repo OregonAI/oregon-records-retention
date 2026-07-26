@@ -25,6 +25,7 @@ what agencies may destroy and when, letting the first silently become the second
 the worst thing this code could do.
 """
 import re
+from pathlib import Path
 
 from corpus_toolkit.mcp.framework import register_scheme
 
@@ -108,17 +109,72 @@ register_scheme("special-schedule-slug",
 # the SCHEDULE that contains it, with the item number carried in the note. That is the
 # truthful answer: the resolver knows which document holds the item, and does not
 # pretend to a granularity the corpus does not store.
+_SCHEDULES_DIR = Path(__file__).resolve().parent.parent / "schedules"
+
+
+def _item_exists(doc_id: str, item: str) -> bool:
+    """Is there really an entry numbered `item` in that schedule?
+
+    This check is the whole reason the resolver is not a one-liner. Without it
+    `das item 999` resolved to schedule-das, reported unresolved: false, and told
+    the caller to 'find the entry numbered 999' — in a document whose highest item
+    is 328. A confident pointer to something that does not exist is a fabrication
+    with extra steps, and in a corpus about record destruction it is the exact
+    failure to design against."""
+    path = _SCHEDULES_DIR / f"{doc_id}.md"
+    if not path.is_file():
+        return False
+    body = path.read_text(encoding="utf-8")
+    # An item is a number at the start of a line, followed by its series title.
+    return re.search(rf"(?m)^\s*{re.escape(item)}\s+\S", body) is not None
+
+
 def _resolve_item(m):
     slug = m.group("slug").lower()
     item = m.group("item")
-    return [f"schedule-{slug}"], (
+    doc_id = f"schedule-{slug}"
+    if not _item_exists(doc_id, item):
+        return [], (
+            f"No entry numbered {item} was found in `{doc_id}`. Either the item number "
+            f"is wrong or it belongs to a different schedule — search the corpus rather "
+            f"than assuming it exists. (If `{doc_id}` itself is unknown, that is the "
+            "real problem: check the schedule id first.)")
+    return [doc_id], (
         f"Item {item} of the {slug} special schedule. Items are not stored as separate "
-        f"documents — open `schedule-{slug}` and find the entry numbered {item}; its "
-        "retention and disposition are stated in the clause directly beneath the record "
-        "series title.")
+        f"documents — open `{doc_id}` and find the entry numbered {item}; its retention "
+        "and disposition are stated in the clause directly beneath the record series "
+        "title.")
 
 
+# Item numbers are 3 digits in 75 of the 76 schedules and 4 in schedule-film-video
+# (0001-0005). Hard-coding \d{3} left that document with no citable items at all.
 register_scheme("retention-item",
                 r"(?i)^(?:schedule-)?(?P<slug>[a-z][a-z0-9-]{1,}?)"
-                r"(?:\s+special\s+schedule)?[\s,]+item\s+(?P<item>\d{3})\s*$",
+                r"(?:\s+special\s+schedule)?[\s,]+item\s+(?P<item>\d{3,4})\s*$",
                 resolver=_resolve_item)
+
+
+# --- local: the document's own citation string --------------------------------------
+# Every document's `citation` frontmatter reads "<Agency> — Oregon Special Records
+# Retention Schedule", and that exact string — the canonical citation this corpus
+# advertises for itself — was the one form it could not resolve. Anyone copying a
+# citation out of a document and asking about it got "no scheme recognized this
+# format", which reads like the citation is malformed when it is the corpus's own.
+def _resolve_own_citation(m, nodes):
+    want = re.sub(r"[^a-z0-9]+", " ", m.group("agency").lower()).strip()
+    if not want:
+        return []
+    hits = [i for i, n in nodes.items()
+            if re.sub(r"[^a-z0-9]+", " ", (n.get("title") or "").lower()).strip() == want]
+    if hits:
+        return hits
+    # Fall back to a containment match: titles are inverted ("Agriculture, Dept. of")
+    # and a caller may reasonably write them the natural way round.
+    return [i for i, n in nodes.items()
+            if want and want in re.sub(r"[^a-z0-9]+", " ", (n.get("title") or "").lower())]
+
+
+register_scheme("own-citation",
+                r"(?i)^(?P<agency>.+?)\s*[—-]\s*Oregon\s+Special\s+Records\s+"
+                r"Retention\s+Schedule\s*$",
+                resolver=_resolve_own_citation)
