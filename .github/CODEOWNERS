@@ -1,0 +1,12 @@
+# Default owner for everything.
+#
+# The template ships `* @OregonAI/maintainers`, but that team does not exist in
+# the org. GitHub silently IGNORES an unresolvable CODEOWNERS entry rather than
+# erroring, so the file would look like a review gate while enforcing nothing.
+# Points at a real account until a maintainers team is created.
+* @morficflux
+
+/schedules/ @morficflux
+/_meta/ @morficflux
+/src/ @morficflux
+/.github/ @morficflux

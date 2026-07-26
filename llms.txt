@@ -1,0 +1,39 @@
+# Oregon Records Retention — Agency Special Schedules
+
+> Non-authoritative, AI-friendly reference for the agency-specific *special* records retention schedules published by the Oregon Secretary of State Archives Division.
+> Full verbatim text of jurisdiction-authored documents is included in-repo;
+> third-party materials are summarized with links to official sources.
+> Always verify against the authoritative source linked in each document.
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): rules for AI agents working in this corpus
+- [STATUS.md](STATUS.md): freshness, coverage, and drift at a glance
+
+## Contents
+
+- `schedules/`: 76 agency **special** records-retention schedules, one Markdown file per
+  agency (or per ODOT division), each carrying the full verbatim text of the schedule PDF
+  published by the Secretary of State Archives Division. Consult these to answer "how long
+  must <agency> keep <record type>, and what happens to it then?" — every record series is
+  a numbered item followed by its retention and disposition clause.
+
+## What is NOT here
+
+Oregon's **general** retention schedules — OAR chapter 166, all 15 divisions, 210 rules —
+are deliberately absent. They live verbatim in
+[OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks)
+and are referenced from here, never copied: two divergent copies of a retention period is
+exactly how a record gets destroyed on the strength of the stale one.
+
+A special schedule *supplements* the general schedule for its agency. To answer a
+retention question completely you may need both — this corpus, and OAR 166 next door. Each
+schedule's `relationships.related` lists the general-schedule rules it cites, as citation
+strings such as `OAR 166-300-0015`. Resolving one of those here returns a pointer to the
+sibling corpus rather than a document; cross-corpus resolution is not implemented yet.
+
+## Citing
+
+- a whole schedule: `DAS Special Schedule`, or its id `schedule-das`
+- a single record series: `DAS Special Schedule item 014` — resolves to the schedule that
+  contains it, with the item number carried in the response

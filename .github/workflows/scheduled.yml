@@ -1,0 +1,12 @@
+name: scheduled
+on:
+  schedule:
+    - cron: "0 14 * * 1"      # weekly Monday; tighten per corpus cadence
+  workflow_dispatch:
+
+jobs:
+  drift:
+    permissions:
+      contents: write
+      issues: write
+    uses: OregonAI/corpus-toolkit/.github/workflows/detect-upstream-changes.yml@v1.0.5

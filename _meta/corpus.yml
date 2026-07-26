@@ -1,0 +1,45 @@
+# Corpus configuration — the single source of truth the toolkit reads.
+corpus:
+  id: "oregon-records-retention"
+  name: "Oregon Records Retention — Agency Special Schedules"
+  jurisdiction: "oregon"
+  archetype: "document"
+  schema_version: 1
+  contract_version: 1
+
+# One root, one doc_type. Every document here is an agency SPECIAL retention
+# schedule published by the Secretary of State Archives Division.
+#
+# Scope boundary, deliberately narrow (see AGENTS.md): the GENERAL schedules —
+# OAR chapter 166, all 15 divisions, 210 rules — already live verbatim in
+# OregonAI/executive-regulatory-frameworks. They are referenced from here, never
+# copied. Two copies of a retention schedule is exactly the failure mode a
+# records corpus must not have.
+content_roots:
+  - path: "schedules"
+    doc_type: "schedule"
+
+plugins:
+  citation_module: "src.citation_schemes"      # calls mcp.framework.register_scheme()
+  # No snapshot_slice_module: a special schedule's snapshot is the whole PDF's
+  # extracted text, with no per-document slicing out of a larger source file.
+  # No issuing_body_registry yet: agency identity here comes from the schedule's
+  # own cover page, not from a separate registry. Revisit if this corpus ever
+  # needs to join against the policy repo's agencies.yml.
+  extra_schema_checks: []
+
+disclaimer_marker: "NON-AUTHORITATIVE"
+graph_path: "_meta/graph.json"
+source_manifest_path: "_meta/source-manifest.yml"
+snapshot_dir: "_meta/snapshots"
+
+provenance:
+  coverage_fail_threshold: 0.70
+  coverage_warn_threshold: 0.90
+
+mcp:
+  server_name: "oregon-records-retention"
+  transports: [stdio, http]
+
+status:
+  reverify_days: 90                  # quarterly re-verification SLA

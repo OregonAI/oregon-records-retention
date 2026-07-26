@@ -1,0 +1,24 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  frontmatter:
+    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.0.5
+  provenance:
+    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.0.5
+  links:
+    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.0.5
+    with:
+      # The template calls this with no exclusions. lychee walks './**/*.md',
+      # which includes _meta/templates/document.md — a skeleton whose example
+      # URLs are not meant to resolve, so every PR would fail on link rot that
+      # is not link rot. Snapshots are excluded pre-emptively: they are .txt
+      # today and so out of lychee's glob, but that is a coincidence of format
+      # rather than a decision, and a future .md snapshot should not silently
+      # start dragging every source URL into the per-PR gate.
+      exclude-paths: |
+        _meta/snapshots
+        _meta/templates
