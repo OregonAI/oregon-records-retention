@@ -28,6 +28,16 @@ plugins:
   # needs to join against the policy repo's agencies.yml.
   extra_schema_checks: []
 
+# Sibling corpora this one resolves citations into (toolkit >= 1.1.0). Cross-corpus
+# references here are citation STRINGS, never copied documents — see AGENTS.md
+# "Scope boundary". The index is published by that corpus's Pages build on every push
+# to main, so it is current by construction rather than a committed file that can
+# fall behind.
+siblings:
+  - id: executive-regulatory-frameworks
+    index_url: "https://oregonai.github.io/executive-regulatory-frameworks/corpus-index.json"
+    web_base: "https://github.com/OregonAI/executive-regulatory-frameworks/blob/main/"
+
 disclaimer_marker: "NON-AUTHORITATIVE"
 graph_path: "_meta/graph.json"
 source_manifest_path: "_meta/source-manifest.yml"
