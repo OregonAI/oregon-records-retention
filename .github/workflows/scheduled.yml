@@ -1,7 +1,7 @@
 name: scheduled
 on:
   schedule:
-    - cron: "0 14 * * 1"      # weekly Monday; tighten per corpus cadence
+    - cron: "0 14 * * 1"      # weekly Monday
   workflow_dispatch:
 
 jobs:
@@ -10,3 +10,28 @@ jobs:
       contents: write
       issues: write
     uses: OregonAI/corpus-toolkit/.github/workflows/detect-upstream-changes.yml@v1.0.5
+
+  # The toolkit's drift check compares each known source's own content hash. It
+  # cannot see a schedule that APPEARS or DISAPPEARS from the index, because a
+  # source absent from the manifest is one it never fetches — the corpus would
+  # never learn that an agency published new retention rules, or that a schedule
+  # a document cites was withdrawn. For a records corpus both are real events, so
+  # the index itself is watched separately.
+  #
+  # Weekly rather than per-PR because it fetches the live Archives Division page;
+  # a network call has no business gating a pull request.
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Index link set must match the source manifest
+        # Compares the extracted LINK SET, never the page bytes — the index is
+        # SharePoint-rendered and ships a fresh __VIEWSTATE and correlation id on
+        # every request, so a page-hash check would report drift on every single
+        # run and be tuned out within a week.
+        run: python3 src/enumerate_schedules.py --check-manifest _meta/source-manifest.yml

@@ -22,3 +22,23 @@ jobs:
       exclude-paths: |
         _meta/snapshots
         _meta/templates
+
+  # Generated artifacts must not drift from the documents they are derived from.
+  # This is the gate the toolkit cannot provide: it only READS _meta/graph.json,
+  # so nothing upstream notices when a schedule is added and the graph is not
+  # rebuilt — resolve_citation and graph_neighbors would simply stop finding the
+  # new document, silently and with no error anywhere.
+  #
+  # Offline and fast on purpose: no network, so it belongs on every PR. Checks
+  # that hit the Archives Division live are on the weekly cron instead.
+  generated:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Authority graph must be current
+        run: python3 src/build_graph.py --check

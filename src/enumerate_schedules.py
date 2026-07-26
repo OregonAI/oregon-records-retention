@@ -345,12 +345,53 @@ def write_manifest(records, index_url, path):
     return len(sources)
 
 
+
+def check_manifest(records, path):
+    """Compare a live enumeration against the committed manifest.
+
+    Compares the LINK SET, never the page bytes. The index page is
+    SharePoint-rendered and ships a fresh __VIEWSTATE and correlation id on every
+    request, so its raw hash changes constantly while the content does not — hashing
+    the page would cry wolf on every run and be ignored within a week.
+
+    Drift here is a real event for a records corpus: a schedule appearing means an
+    agency's retention rules are newly published, and one disappearing means the
+    authority a document cites has been withdrawn.
+    """
+    import yaml
+
+    with open(path, encoding="utf-8") as fh:
+        committed = yaml.safe_load(fh)
+    have = {s["id"]: s["url"] for s in committed.get("sources") or []}
+    live = {f"schedule-{r['slug'].lower()}": r["url"]
+            for r in records if r["kind"] == "special_schedule"}
+
+    added = sorted(set(live) - set(have))
+    removed = sorted(set(have) - set(live))
+    moved = sorted(i for i in set(live) & set(have) if live[i] != have[i])
+
+    for label, ids, mapping in (("ADDED upstream", added, live),
+                                ("REMOVED upstream", removed, have),
+                                ("URL CHANGED", moved, live)):
+        for i in ids:
+            print(f"  {label}: {i}  {mapping[i]}")
+    if added or removed or moved:
+        print(f"\nmanifest drift: {len(added)} added, {len(removed)} removed, "
+              f"{len(moved)} moved — re-run with --manifest and review the diff")
+        return 1
+    print(f"manifest is current ({len(live)} schedules, link set unchanged)")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--url", default=INDEX_URL)
     ap.add_argument("--out", default="inventory.json")
     ap.add_argument("--manifest", metavar="PATH",
                     help="also write _meta/source-manifest.yml from the enumeration")
+    ap.add_argument("--check-manifest", metavar="PATH",
+                    help="compare a live enumeration against a committed manifest and "
+                         "exit 1 on drift (added/removed/moved schedules)")
     ap.add_argument("--cache", default="index.html")
     ap.add_argument("--use-cache", action="store_true",
                     help="reuse a previously downloaded copy of the index page")
@@ -431,6 +472,9 @@ def main():
     print("  special_schedule: %d" % c["special_schedule"])
     print("  guidance:         %d" % c["guidance"])
     print("wrote %s" % out_path)
+    if args.check_manifest:
+        sys.exit(check_manifest(sorted(records.values(), key=lambda r: r["slug"].lower()),
+                                args.check_manifest))
     if args.manifest:
         n = write_manifest(sorted(records.values(), key=lambda r: r["slug"].lower()),
                            args.url, args.manifest)
