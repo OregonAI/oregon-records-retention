@@ -11,19 +11,18 @@ issuing_body: Oregon Secretary of State, Archives Division
 agency: Oregon Department of Transportation
 division: Motor Carrier Transportation Division (MCTD)
 schedule_number: 2008-0007
-legal_authority:
-- ORS 192.005
-- ORS 357.895
-- OAR 166-030-0027
+legal_authority: []
 source_url: https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-motor-carrier.pdf
 source_format: pdf
 retrieved: '2026-07-25'
 source_sha256: 37e049050a07f0aa025a549ac3dc234e5a8a290f4e704330c13b9b111f0cf359
 effective_date: null
 effective_date_text: December 2008
+expires: '2013-12-31'
+expires_text: December 2013
 last_reviewed: null
 source_version: 2008-0007
-status: current
+status: superseded
 content_mode: verbatim
 conversion_notes: 'Text extracted from the source PDF with pypdf 6.14.2 (per-page extract_text), 14 pages. Stripped repeated running-header lines: "Edition: December 2008 Expires: December 2013"; "OREGON STATE ARCHIVES"; "Records Retention Schedule". Stripped 13 bare page-number line(s). Only lines that BOTH repeat at a page edge on 80%+ of pages AND read as publisher chrome (Archives Division banner, edition/effective/expires/schedule-number line, bare page number) were removed; every other repeated line, including per-page ''Organizational Placement'' / ''Agency'' / ''Systems of Record'' blocks, was left in place. Trailing whitespace removed and blank-line runs collapsed to one. No substantive text was rewritten, reordered, or normalized.'
 last_verified: ''
@@ -48,6 +47,11 @@ tags:
 > **NON-AUTHORITATIVE — AI-friendly reference only.** This is a curated
 > copy, not the official text. Verify against the official source:
 > <https://sos.oregon.gov/archives/records-management/Documents/schedule/schedule-transportation-motor-carrier.pdf> (retrieved 2026-07-25).
+
+> **⚠ EXPIRED — this schedule states it expired December 2013.**
+> The retention periods below are lapsed authority. Confirm the current
+> schedule with the Oregon State Archives before retaining or destroying
+> anything on the strength of this document.
 
 # ODOT - Motor Carrier Transportation Division
 
@@ -487,9 +491,20 @@ chapter 166 rules and live verbatim in the sibling corpus
 [OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);
 they are referenced here as citations, never copied (see AGENTS.md).
 
+Reproduced exactly as the source schedule cites them. A few are stale upstream —
+the rule was renumbered or repealed after this schedule was published — so a
+citation here is not a guarantee the rule still exists. Resolving one reports
+the difference: a live rule returns a title and link, a stale one reports that
+the sibling corpus holds no such document.
+
 - OAR 166-300-0015
 - OAR 166-300-0025
 - OAR 166-300-0040
+
+## Curator notes
+
+This schedule's own cover states it expires December 2013, which has passed. Recorded as superseded because the schema has no 'expired' value — that is NOT evidence a replacement schedule exists; none was identified. Treat the retention periods below as lapsed authority and confirm the current schedule with the Archives Division before acting on them.
+
 
 ## Provenance & change history
 

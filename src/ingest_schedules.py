@@ -29,6 +29,7 @@ live verbatim in the sibling corpus and are referenced as citation STRINGS in
 from __future__ import annotations
 
 import argparse
+import calendar
 import datetime
 import re
 import shutil
@@ -107,9 +108,23 @@ def is_page_number(norm_line: str, npages: int) -> bool:
     return int(m.group(1)) <= npages + 5
 
 OAR_166_RE = re.compile(r"\bOAR\s*(166-\d{3}-\d{4})\b")
-SCHEDULE_NO_RE = re.compile(r"Schedule\s*Number\s*:?\s*(\d{4}-\d{4})", re.I)
+# "Schedule Number:", "Schedule #:" and "Schedule No.:" all occur upstream. Matching
+# only the first form silently left schedule_number null on four documents.
+SCHEDULE_NO_RE = re.compile(
+    r"Schedule\s*(?:Number|No\.?|\#)\s*:?\s*(\d{4}-\d{4})", re.I)
 SCHEDULE_NO_COVER_RE = re.compile(r"Records\s+Retention\s+Schedule\s+(\d{4}-\d{4})", re.I)
-EFFECTIVE_RE = re.compile(r"Effective\s*Date\s*:?\s*([^\n]{1,60})", re.I)
+# These schedules label their date "Edition:" far more often than "Effective Date:".
+# Matching only the latter discarded a printed date on 17 of 76 documents, including
+# the one document that prints a FULL date (schedule-transportation-director,
+# "Edition: July 31, 2003") and could therefore populate effective_date properly.
+EFFECTIVE_RE = re.compile(
+    r"(?:Effective\s*Date|Edition)\s*:?\s*([^\n]{1,60})", re.I)
+
+# THE EXPIRY IS THE MOST IMPORTANT LINE ON THE PAGE and CHROME_RE deletes it: it
+# repeats at a page edge and looks exactly like publisher chrome. Three schedules
+# lost the only notice that they had expired -- one of them in 2013 -- while still
+# asserting status: current. Capture it from the RAW text, before any stripping.
+EXPIRES_RE = re.compile(r"Expires\s*:?\s*([A-Za-z]+\s+\d{4})", re.I)
 AGENCY_RE = re.compile(r"^\s*Agency\s*:\s*(.+?)\s*$", re.M)
 DIVISION_RE = re.compile(r"^\s*Division\s*:\s*(.+?)\s*$", re.M)
 
@@ -124,7 +139,16 @@ def fetch_pdf(source_id: str, url: str, refetch: bool) -> tuple[bytes, bool]:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cached = CACHE_DIR / f"{source_id}.pdf"
     if cached.is_file() and not refetch:
-        return cached.read_bytes(), False
+        data = cached.read_bytes()
+        # Validate the CACHE too, not just fresh downloads. A truncated or corrupt
+        # cache entry was previously trusted forever: the magic check sat only on
+        # the fetch path, so every later run silently reused the bad bytes. Falling
+        # through to a re-fetch is the right repair — the cache exists for speed,
+        # never as a source of truth.
+        if data.startswith(b"%PDF"):
+            return data, False
+        print(f"  cached {source_id}.pdf is not a PDF (first bytes "
+              f"{data[:8]!r}) — refetching", file=sys.stderr)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=120) as resp:
         data = resp.read()
@@ -242,8 +266,14 @@ def extract(pdf_path: Path) -> tuple[str, dict]:
     if fenced:
         text = "\n".join(" " + ln if ln.startswith("## ") else ln
                          for ln in text.split("\n"))
+    # The RAW text, before furniture stripping. Cover metadata must be read from
+    # this: "Edition: ... Expires: ..." repeats at a page edge and is therefore
+    # removed as chrome, which is precisely how four expired schedules came to
+    # assert status: current with no expiry recorded anywhere.
+    raw = "\n".join("\n".join(pg) for pg in pages)
     return text, {"pages": len(pages), "header": sorted(header),
-                  "footer": sorted(footer), "removed": removed, "fenced": fenced}
+                  "footer": sorted(footer), "removed": removed, "fenced": fenced,
+                  "raw": raw}
 
 
 # --- cover-page metadata ------------------------------------------------------------
@@ -265,6 +295,23 @@ def parse_effective_date(raw: str):
     return None, s
 
 
+def parse_expiry(raw: str) -> str | None:
+    """"August 2017" -> "2017-08-31". Expiry needs its own parse, not the effective-date
+    one: that returns no ISO value for a month-year (there is no day), so an expiry
+    would stay null and nothing could compare it to today. An expiry stated as a month
+    runs THROUGH that month, so it resolves to the last day — the reading that treats
+    the schedule as valid for as long as its own text allows."""
+    m = re.match(r"([A-Za-z]+)\s+(\d{4})$", (raw or "").strip())
+    if not m:
+        return None
+    mo = MONTHS.get(m.group(1).lower())
+    if not mo:
+        return None
+    year = int(m.group(2))
+    last = calendar.monthrange(year, mo)[1]
+    return f"{year:04d}-{mo:02d}-{last:02d}"
+
+
 def cover_metadata(text: str) -> dict:
     head = text[:20000]
     num = SCHEDULE_NO_RE.search(head) or SCHEDULE_NO_COVER_RE.search(head)
@@ -279,13 +326,49 @@ def cover_metadata(text: str) -> dict:
         vals = {v.strip() for v in rx.findall(source) if v.strip()}
         return vals.pop() if len(vals) == 1 else None
 
+    # Searched over the WHOLE document, not the cover window: schedule-public-safety
+    # prints its banner from page 9 onward, putting the expiry at character 21,690 —
+    # past any plausible cover window, and it was missed entirely. Whole-document
+    # search is safe here because the pattern demands "Expires: <Month> <Year>";
+    # prose like "3 years after license expires, destroy" cannot match it. Where the
+    # banner repeats, the most common value wins over a one-off variant.
+    found = [x.strip() for x in EXPIRES_RE.findall(text)]
+    expires_text = Counter(found).most_common(1)[0][0] if found else None
+    expires_iso = parse_expiry(expires_text) if expires_text else None
+
     return {
         "schedule_number": schedule_number,
         "effective_date": eff_iso,
         "effective_date_text": eff_text,
+        "expires_text": expires_text,
+        "expires": expires_iso,
         "agency": _uniq(AGENCY_RE, text),
         "division": _uniq(DIVISION_RE, text),
     }
+
+
+def status_for(meta: dict, today: str) -> tuple[str, str | None]:
+    """(status, why). A schedule past its printed expiry is not `current`.
+
+    Hard-coding `status: current` on everything put four expired schedules — one
+    lapsed since December 2013 — in front of readers as live authority, with the
+    expiry line stripped out of three of them. For a corpus that tells people when
+    they may DESTROY a record, that is the worst defect available.
+
+    The schema's enum offers current | superseded | repealed | proposed | draft and
+    has no "expired". `superseded` is the least-wrong of those, but it overstates
+    what is known: nothing here evidences a successor schedule, only that this one
+    lapsed. The `expires` field carries the fact, and the note says exactly that so
+    the status is never mistaken for proof a replacement exists."""
+    exp = meta.get("expires")
+    if not exp or exp >= today:
+        return "current", None
+    return "superseded", (
+        f"This schedule's own cover states it expires {meta['expires_text']}, which has "
+        f"passed. Recorded as superseded because the schema has no 'expired' value — "
+        f"that is NOT evidence a replacement schedule exists; none was identified. "
+        f"Treat the retention periods below as lapsed authority and confirm the current "
+        f"schedule with the Archives Division before acting on them.")
 
 
 # --- document authoring -------------------------------------------------------------
@@ -320,7 +403,7 @@ def conversion_notes(info: dict) -> str:
 
 
 def frontmatter(src: dict, meta: dict, sha: str, notes: str, oar: list[str],
-                retrieved: str) -> str:
+                retrieved: str, status: str = "current") -> str:
     fm = {
         "schema_version": 1,
         "corpus": CORPUS,
@@ -338,16 +421,27 @@ def frontmatter(src: dict, meta: dict, sha: str, notes: str, oar: list[str],
         "agency": meta["agency"],
         "division": meta["division"],
         "schedule_number": meta["schedule_number"],
-        "legal_authority": ["ORS 192.005", "ORS 357.895", "OAR 166-030-0027"],
+        # EMPTY, and it must stay empty unless a schedule actually cites its own
+        # authority. This previously hard-coded ORS 192.005 / ORS 357.895 /
+        # OAR 166-030-0027 onto all 76 documents; grepping every snapshot for those
+        # three returns ZERO hits. They are legally plausible, which is what made it
+        # dangerous — unsourced citations sitting in machine-readable metadata,
+        # directly against AGENTS.md rule 1. Plausible and sourced are not the same
+        # thing, and only one of them belongs in a corpus like this.
+        "legal_authority": [],
         "source_url": src["url"],
         "source_format": "pdf",
         "retrieved": retrieved,
         "source_sha256": sha,
         "effective_date": meta["effective_date"],
         "effective_date_text": meta["effective_date_text"],
+        # The schedule's own printed expiry. Its absence from frontmatter is why
+        # four lapsed schedules were served as live authority.
+        "expires": meta["expires"],
+        "expires_text": meta["expires_text"],
         "last_reviewed": None,
         "source_version": meta["schedule_number"],
-        "status": "current",
+        "status": status,
         "content_mode": "verbatim",
         "conversion_notes": notes,
         # AGENTS.md rule 6: the human reviewer sets these at approval, not the
@@ -390,13 +484,27 @@ def at_a_glance(src: dict, meta: dict, oar: list[str], info: dict) -> str:
 def document(src: dict, meta: dict, text: str, sha: str, oar: list[str],
              info: dict, retrieved: str) -> str:
     notes = conversion_notes(info)
+    status, lapsed = status_for(meta, retrieved)
     parts = [
-        "---\n" + frontmatter(src, meta, sha, notes, oar, retrieved) + "---\n",
+        "---\n" + frontmatter(src, meta, sha, notes, oar, retrieved, status) + "---\n",
         "",
         "> **NON-AUTHORITATIVE — AI-friendly reference only.** This is a curated",
         "> copy, not the official text. Verify against the official source:",
         f"> <{src['url']}> (retrieved {retrieved}).",
         "",
+    ]
+    # A lapsed schedule says so ABOVE its own text, not in a metadata field nobody
+    # reads. The expiry line repeats at a page edge and so was being stripped as
+    # publisher chrome, which removed the only warning the document carried.
+    if lapsed:
+        parts += [
+            f"> **⚠ EXPIRED — this schedule states it expired {meta['expires_text']}.**",
+            "> The retention periods below are lapsed authority. Confirm the current",
+            "> schedule with the Oregon State Archives before retaining or destroying",
+            "> anything on the strength of this document.",
+            "",
+        ]
+    parts += [
         f"# {src['title']}",
         "",
         "## At a glance",
@@ -414,8 +522,22 @@ def document(src: dict, meta: dict, text: str, sha: str, oar: list[str],
         "[OregonAI/executive-regulatory-frameworks](https://github.com/OregonAI/executive-regulatory-frameworks);",
         "they are referenced here as citations, never copied (see AGENTS.md).",
         "",
+        "Reproduced exactly as the source schedule cites them. A few are stale upstream —",
+        "the rule was renumbered or repealed after this schedule was published — so a",
+        "citation here is not a guarantee the rule still exists. Resolving one reports",
+        "the difference: a live rule returns a title and link, a stale one reports that",
+        "the sibling corpus holds no such document.",
+        "",
     ]
     parts += [f"- {c}" for c in oar] or ["- None cited in this schedule."]
+    if lapsed:
+        parts += [
+            "",
+            "## Curator notes",
+            "",
+            lapsed,
+            "",
+        ]
     parts += [
         "",
         "## Provenance & change history",
@@ -446,7 +568,9 @@ def ingest(src: dict, refetch: bool, retrieved: str) -> dict:
     sha = hash_snapshot(sid, "pdf", SNAP_DIR)
 
     oar = sorted({f"OAR {m}" for m in OAR_166_RE.findall(text)})
-    meta = cover_metadata(text)
+    # info["raw"] not `text`: see extract(). Reading cover metadata from the
+    # stripped text loses exactly the fields the stripper removes.
+    meta = cover_metadata(info.get("raw") or text)
     DOC_DIR.mkdir(parents=True, exist_ok=True)
     (DOC_DIR / f"{sid}.md").write_text(
         document(src, meta, text, sha, oar, info, retrieved), encoding="utf-8")
