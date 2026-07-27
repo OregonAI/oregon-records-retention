@@ -6,12 +6,20 @@ on:
 
 jobs:
   frontmatter:
-    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.1.0
-  provenance:
-    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.1.0
-  links:
-    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.1.0
+    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.4.0
     with:
+      # Pin the CODE, not just the workflow file above — separate knobs.
+      toolkit-ref: v1.4.0
+  provenance:
+    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.4.0
+    with:
+      # Pin the CODE, not just the workflow file above — separate knobs.
+      toolkit-ref: v1.4.0
+  links:
+    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.4.0
+    with:
+      # Pin the CODE, not just the workflow file above — separate knobs.
+      toolkit-ref: v1.4.0
       # The template calls this with no exclusions. lychee walks './**/*.md',
       # which includes _meta/templates/document.md — a skeleton whose example
       # URLs are not meant to resolve, so every PR would fail on link rot that
