@@ -6,3 +6,7 @@ __pycache__/
 # src/ingest_schedules.py is offline and the Archives Division is fetched once
 # per URL. The committed provenance copy is _meta/snapshots/<id>.pdf.
 _meta/.cache/
+
+# Generated at deploy time by src/build_site.py — never committed, so it cannot fall
+# behind the corpus it reports on.
+site/
