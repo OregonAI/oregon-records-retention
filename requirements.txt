@@ -1,0 +1,8 @@
+# Runtime + tooling dependencies for this corpus.
+#
+# The [mcp] extra is what installs the MCP SDK that `corpus-mcp-serve` imports. Without it
+# the CLI is on PATH but fails at import — so it must be present for the container to serve.
+corpus-toolkit[mcp] @ git+https://github.com/OregonAI/corpus-toolkit@v1.5.0
+pyyaml
+# src/ingest_schedules.py extracts the schedule PDFs.
+pypdf
