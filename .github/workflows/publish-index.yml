@@ -34,7 +34,7 @@ permissions:
 
 jobs:
   publish:
-    uses: OregonAI/corpus-toolkit/.github/workflows/publish-index.yml@v1.5.0
+    uses: OregonAI/corpus-toolkit/.github/workflows/publish-index.yml@v1.5.1
     with:
       # Pin the CODE, not just the workflow file above — separate knobs.
-      toolkit-ref: v1.5.0
+      toolkit-ref: v1.5.1
