@@ -6,17 +6,17 @@ on:
 
 jobs:
   frontmatter:
-    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.5.2
+    uses: OregonAI/corpus-toolkit/.github/workflows/validate-frontmatter.yml@v1.8.0
     with:
       # Pin the CODE, not just the workflow file above — separate knobs.
       toolkit-ref: v1.5.2
   provenance:
-    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.5.2
+    uses: OregonAI/corpus-toolkit/.github/workflows/verify-provenance.yml@v1.8.0
     with:
       # Pin the CODE, not just the workflow file above — separate knobs.
       toolkit-ref: v1.5.2
   links:
-    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.5.2
+    uses: OregonAI/corpus-toolkit/.github/workflows/check-links.yml@v1.8.0
     with:
       # Pin the CODE, not just the workflow file above — separate knobs.
       toolkit-ref: v1.5.2
