@@ -9,10 +9,10 @@ jobs:
     permissions:
       contents: write
       issues: write
-    uses: OregonAI/corpus-toolkit/.github/workflows/detect-upstream-changes.yml@v1.5.2
+    uses: OregonAI/corpus-toolkit/.github/workflows/detect-upstream-changes.yml@v1.8.0
     with:
       # Pin the CODE, not just the workflow file above — separate knobs.
-      toolkit-ref: v1.5.2
+      toolkit-ref: v1.8.0
 
   # The toolkit's drift check compares each known source's own content hash. It
   # cannot see a schedule that APPEARS or DISAPPEARS from the index, because a
