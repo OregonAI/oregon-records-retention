@@ -5,3 +5,7 @@ site/
 # NOTE: .git is deliberately NOT ignored — it is a RUNTIME dependency (the FTS cache key is
 # `git rev-parse HEAD` + a hash of `git status --porcelain`, and corpus_overview() runs
 # `git log -1`). Build from a depth-1 clone to keep it small; see the Dockerfile header.
+# 28M, and NOT read at runtime. Snapshots are provenance evidence for
+# corpus-verify-provenance; there is no reference to them anywhere under corpus_toolkit/mcp/.
+# Consequence: that validator cannot run inside the container. It is a CI gate, run it there.
+_meta/snapshots/

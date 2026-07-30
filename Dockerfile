@@ -16,8 +16,12 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y --no-install-recommends git && \
     rm -rf /var/lib/apt/lists/*
 WORKDIR /repo
-COPY . .
+# Deps BEFORE content: a content-only change must not re-run pip. With these two steps the
+# other way round -- how this read until 2026-07-30 -- every edited document invalidated the
+# COPY layer and forced a full reinstall.
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
 # Pre-build the FTS index so the first request is instant. This corpus is 76 schedules, so
 # it is quick — but the step also fails the BUILD if content is missing, rather than
 # shipping an image that starts fine and answers nothing.
