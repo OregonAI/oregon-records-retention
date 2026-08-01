@@ -4,6 +4,16 @@ corpus:
   name: "Oregon Records Retention — Agency Special Schedules"
   jurisdiction: "oregon"
   archetype: "document"
+  # Where the OFFICIAL schedules live. Emitted on every MCP response (interface contract,
+  # response convention 1), and until now it was unset — so every response carried
+  # `authoritative_source: null` and told an agent to "verify at source" without telling it
+  # where the source is. A disclaimer that cannot be acted on is worse than none: it reads as
+  # diligence while leaving the reader exactly where they started.
+  #
+  # The records-management LANDING page, not the state-agency schedule index. The index is
+  # one family's list; this field answers "where does the real thing live?" for the corpus,
+  # and the landing page is the answer whichever families it ends up holding.
+  authoritative_source: "https://sos.oregon.gov/archives/records-management/Pages/default.aspx"
   schema_version: 1
   contract_version: 1
 
