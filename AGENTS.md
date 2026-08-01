@@ -30,6 +30,44 @@ record series is not covered generally, the agency's special schedule governs.
 So the two layers must be read together, and this corpus's job is to hold the
 half that OAR does not publish as rules.
 
+### Why there are no county, city or district special schedules here
+
+Asked and answered on 2026-08-01, so it does not have to be re-derived. The
+boundary above is general-vs-special and says nothing about state-vs-local, and
+this corpus's own seed contemplated local government — so "add the counties"
+is a reasonable thing to propose. **It is not buildable, because the Archives
+Division does not publish them.** Verified, not assumed:
+
+- The Archives' own page states it: *"Special Records Retention Schedules are
+  specific to the records of a particular **state agency**."*
+  (`records-management/pages/records-retention-schedule.aspx`)
+- `Retention Schedule Basics for State Agencies` v2.0, Feb 2026, defines
+  **Special** as *"records that are unique to a **state agency**"*.
+- `sitemap.xml` enumerates one schedule-listing page, `state-admin-schedules.aspx`.
+  There is no local equivalent, and none in the Wayback history either.
+- The per-body PDF convention holds no local bodies:
+  `schedule-multnomah-county.pdf`, `schedule-marion-county.pdf` and
+  `schedule-lane-county.pdf` all 404 while `schedule-das.pdf` returns 200.
+
+**Two false positives to not chase.** `/archives/county-records-guide/*-inventory.aspx`
+exists for ~39 counties — those are historical records *inventories*, finding aids,
+not retention schedules. And counties self-publish department-level schedules on
+their own sites (Multnomah's `MCSO19` and friends), which cite OAR 166-150 as
+authority but carry no State Archivist approval statement: county-authored
+crosswalks to the general schedule, on 36 different websites, and a different
+project from this one.
+
+**Counties are already covered for the general layer.** OAR 166-150 is the
+*County and Special District* Records Retention Schedule — note it is not
+county-only — and it is in the sibling corpus and resolves from here today:
+`resolve_citation("OAR 166-150-0020")` returns "Building Records". Four counties
+in `oregon-counties` already cite it.
+
+The one state-issued retention artifact that does reach local bodies is the
+June 2023 blanket *Special Authorization to Destroy Records* (body-worn camera,
+video surveillance and phone-call recordings, pending integration into the
+general schedules). One document, not a corpus.
+
 Cross-corpus references (to OAR 166 rules, to ORS 192) are written as
 **citation strings**, e.g. `ORS 192.311`, not as local document ids. The
 toolkit's frontmatter validator deliberately tolerates citation-shaped
