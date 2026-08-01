@@ -12,8 +12,14 @@ name: pages
 #
 # src/build_site.py therefore owns both jobs and keeps emitting corpus-index.json at the
 # SAME URL. That URL is load-bearing outside this repo: the org page reads it for live
-# document counts, and it is how a sibling corpus resolves citations INTO this one. Dropping
-# it would break something in someone else's repository, silently.
+# document counts.
+#
+# CORRECTION: this comment used to add "and it is how a sibling corpus resolves citations INTO
+# this one". NOTHING DOES, and nothing ever did — checked across every repo's `siblings:` block
+# and every citation module on the platform. The claim is true for
+# executive-regulatory-frameworks and was copied here without being verified. It mattered:
+# retiring this corpus looked riskier than it was, because the comment implied a consumer that
+# does not exist.
 on:
   push:
     branches: [main]
